@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky Puzzle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Lucky Arcade</p>
+          <h1>Puzzle Game</h1>
+        </div>
+        <button id="reset-btn" class="primary-btn">Shuffle</button>
+      </header>
+
+      <section class="panel stats">
+        <div class="stat">
+          <span class="label">Moves</span>
+          <strong id="move-count">0</strong>
+        </div>
+        <div class="stat">
+          <span class="label">Time</span>
+          <strong id="timer">00:00</strong>
+        </div>
+      </section>
+
+      <section class="panel controls">
+        <label>Board Size</label>
+        <div class="difficulty-buttons" aria-label="Puzzle difficulty">
+          <button class="difficulty active" data-size="3">3x3</button>
+          <button class="difficulty" data-size="4">4x4</button>
+        </div>
+      </section>
+
+      <section class="panel game-shell">
+        <div id="puzzle-grid" class="puzzle-grid" aria-live="polite"></div>
+      </section>
+
+      <p id="status" class="status">Press Shuffle to start.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
